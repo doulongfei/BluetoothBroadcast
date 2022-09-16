@@ -219,14 +219,14 @@ public class BluetoothUtils {
 		Set<BluetoothDevice> bondedDevices = mBluetoothAdapter.getBondedDevices();
 //		bondedDevices.iterator().
 		for (BluetoothDevice device : bondedDevices) {
-			Log.d("Jason", "Name:" + device.getName() + "   Mac:" + device.getAddress());
+			Log.d(TAG, "Name:" + device.getName() + "   Mac:" + device.getAddress());
 
 			try {
 				//使用反射调用获取设备连接状态方法
 				Method isConnectedMethod = BluetoothDevice.class.getDeclaredMethod("isConnected", (Class[]) null);
 				isConnectedMethod.setAccessible(true);
 				boolean isConnected = (boolean) isConnectedMethod.invoke(device, (Object[]) null);
-				Log.d("dou", "isConnected：" + isConnected);
+				Log.d(TAG, "isConnected：" + isConnected);
 			} catch (NoSuchMethodException e) {
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
