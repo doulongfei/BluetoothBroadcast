@@ -298,6 +298,12 @@ public class BluetoothUtils {
 		return mBluetoothAdapter != null && mBluetoothAdapter.enable();
 	}
 
+
+	/**
+	 * 关闭蓝牙  个别品牌手机会弹出请求关闭和打开弹框
+	 *
+	 * @return {@link Boolean}
+	 */
 	@SuppressLint("MissingPermission")
 	public Boolean closeBluetooth() {
 		return mBluetoothAdapter != null && mBluetoothAdapter.disable();
