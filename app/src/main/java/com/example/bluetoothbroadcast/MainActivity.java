@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				sendOrReceiveBroadcast();
 				break;
 			case R.id.send_apk:
-				mBluetoothUtils.getBonded();
-//				mBluetoothUtils.sendApkByBt(this);
+//				mBluetoothUtils.getBonded();
+				mBluetoothUtils.sendApkByBt(this);
 			default:
 				break;
 		}
